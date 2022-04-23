@@ -3,8 +3,6 @@ import 'package:hive_flutter/hive_flutter.dart';
 import 'package:storage_example/data/app_keys.dart';
 
 class LocalSource {
-  LocalSource();
-
   LocalSource._();
 
   static Box? _localStorage;

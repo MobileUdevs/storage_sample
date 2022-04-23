@@ -26,26 +26,6 @@ class HiveDatabase {
     await _boxFavourite?.add(product);
   }
 
-  Future<void> updateProduct(Products product, bool isMinus) async {
-    if (isMinus) {
-      await _boxFavourite?.put(
-        product.id,
-        Products(
-          id: product.id,
-          name: product.name,
-        ),
-      );
-    } else {
-      await _boxFavourite?.put(
-        product.id,
-        Products(
-          id: product.id,
-          name: product.name,
-        ),
-      );
-    }
-  }
-
   Future<void> deleteProduct(String id) async {
     await _boxFavourite?.delete(id);
   }

@@ -2,8 +2,6 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:storage_example/data/app_keys.dart';
 
 class LocalSource1 {
-  LocalSource1();
-
   LocalSource1._();
 
   static SharedPreferences? _localStorage;
@@ -12,7 +10,7 @@ class LocalSource1 {
 
   static LocalSource1 get instance => _localSource ?? LocalSource1._();
 
-  static Future<void> getInstance() async {
+  static Future<void>  getInstance() async {
     if (_localStorage == null) {
       _localSource ??= LocalSource1._();
       _localStorage = await SharedPreferences.getInstance();

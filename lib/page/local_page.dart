@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:storage_example/data/source/local_source.dart';
+import 'package:storage_example/data/source/storage_util1.dart';
 
 class LocalPage extends StatefulWidget {
   const LocalPage({Key? key}) : super(key: key);
@@ -46,9 +47,9 @@ class _LocalPageState extends State<LocalPage> {
           InkWell(
             onTap: () async {
               await _localSource.setLock(_controller.text.toString());
-              // setState(() {
-              //   _lockCode = _localSource.getLock();
-              // });
+              setState(() {
+                _lockCode = _localSource.getLock();
+              });
             },
             child: SafeArea(
               minimum: const EdgeInsets.only(top: 12),

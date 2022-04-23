@@ -2,8 +2,6 @@ import 'package:get_storage/get_storage.dart';
 import 'package:storage_example/data/app_keys.dart';
 
 class LocalSource2 {
-  LocalSource2();
-
   LocalSource2._();
 
   static final GetStorage _localStorage = GetStorage();
